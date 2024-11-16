@@ -5,14 +5,63 @@
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:fitnessTracker24_25"
         mc:Ignorable="d"
-        Title="Fitness Tracker"
+        Title="FitnessTracker24-25"
         Height="450" 
-        Width="800">
+        Width="800"
+        ResizeMode="NoResize">
     <Grid>
+        <!--Definimos un TabControl para la creacion de pestañas-->
         <TabControl>
+            <!--Definimos la pestaña de Ejercicios-->
             <TabItem Header="Ejercicios">
-                
+                <!--Creamos un grid para la disposicion de elemntos en la pantalla-->
+                <Grid Name="EjerciciosGrid">
+                    <!--Definimos las filas para un ScrollViewer y un StackPanel-->
+                    <Grid.RowDefinitions>
+                        <RowDefinition Height="*"/>
+                        <RowDefinition Height="Auto"/>
+                    </Grid.RowDefinitions>
+                    <!--Definimos un ScrollViewer para meter dentro el DataGrid-->
+                    <ScrollViewer Grid.Row="0">
+                        <DataGrid Name="EjerciciosDataGrid">
+                            
+                        </DataGrid>
+                    </ScrollViewer>
+
+                    <!--Definimos un StackPanel para los botones Añadir, Eliminar y Modificar-->
+                    <StackPanel Name="BotonesStackPanel"
+                                Grid.Row="1"
+                                HorizontalAlignment="Right"
+                                Orientation="Horizontal">
+
+                        <Button Name="addButton" 
+                                Grid.Column="0" 
+                                Grid.Row="1"
+                                Margin="5"
+                                Click="addButton_Click">
+                            Añadir
+                        </Button>
+
+                        <Button Name="deleteButton"
+                                Grid.Column="1" 
+                                Grid.Row="1"
+                                Margin="5"
+                                Click="deleteButton_Click">
+                            Eliminar
+                        </Button>
+
+                        <Button Name="editButton"
+                                Grid.Column="2" 
+                                Grid.Row="1"
+                                Margin="5"
+                                Click="editButton_Click">
+                            Modificar
+                        </Button>
+                    </StackPanel>
+                </Grid>
             </TabItem>
+            
+            <!--Definimos la pestaña de Daily Insights-->
             <TabItem Header="Daily Insights">
                 
             </TabItem>
