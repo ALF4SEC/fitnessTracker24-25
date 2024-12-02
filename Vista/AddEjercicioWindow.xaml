@@ -1,0 +1,88 @@
+﻿<Window x:Class="fitnessTracker24_25.Vista.AddEjercicioWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:fitnessTracker24_25.Vista"
+        mc:Ignorable="d"
+        Title="AñadirEjercicio" 
+        Height="350" 
+        Width="400"
+        WindowStartupLocation="CenterOwner">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="*"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="*"/>
+        </Grid.ColumnDefinitions>
+
+        <!-- Campo para el Nombre del Ejercicio -->
+        <TextBlock Text="Nombre:" 
+                   Grid.Row="0" 
+                   Grid.Column="0" 
+                   VerticalAlignment="Center"
+                   Margin="5"/>
+        <TextBox Name="NombreTextBox"
+                 Grid.Row="0" 
+                 Grid.Column="1" 
+                 Margin="5"/>
+
+        <!-- Campo para la Descripción del Ejercicio -->
+        <TextBlock Text="Descripción:" 
+                   Grid.Row="1" 
+                   Grid.Column="0" 
+                   VerticalAlignment="Center"
+                   Margin="5"/>
+        <TextBox Name="DescripcionTextBox"
+                 Grid.Row="1" 
+                 Grid.Column="1" 
+                 Margin="5"/>
+
+        <!-- Selección de Grupos Musculares -->
+        <TextBlock Text="Grupos Musculares:" 
+                   Grid.Row="2" 
+                   Grid.Column="0" 
+                   VerticalAlignment="Center" 
+                   Margin="5"/>
+        <DataGrid Name="DataGridMusculos"
+                  Grid.Row="2" 
+                  Grid.Column="1"
+                  CanUserAddRows="False"
+                  IsReadOnly="False"
+                  AutoGenerateColumns="False"
+                  CanUserReorderColumns="False"
+                  CanUserResizeColumns="False"
+                  VerticalScrollBarVisibility="Auto"
+                  HorizontalScrollBarVisibility="Auto"
+                  VerticalAlignment="Top"
+                  HorizontalAlignment="Center"
+                  Margin="5">
+            <DataGrid.Columns>
+                <DataGridTextColumn Header="Grupos Musculares" Binding="{Binding NombreMusculo}" Width="*"/>
+                <DataGridCheckBoxColumn Header="Elige" Width="*"  Binding="{Binding Seleccion}"/>
+            </DataGrid.Columns>
+        </DataGrid>
+
+        <!-- Botones Aceptar y Cancelar -->
+        <StackPanel Grid.Row="3" 
+                    Grid.Column="1" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Right" 
+                    Margin="5">
+            
+            <Button Content="Aceptar"
+                    Margin="5"
+                    Click="AceptarButton_Click"/>
+            
+            <Button Content="Cancelar"
+                    Margin="5"
+                    Click="CancelarButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>

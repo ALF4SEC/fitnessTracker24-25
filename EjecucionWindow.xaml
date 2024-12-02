@@ -1,24 +1,25 @@
-﻿<Window x:Class="fitnessTracker24_25.MainWindow"
+﻿<Window x:Class="fitnessTracker24_25.EjecucionWindow"
         xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
         xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
         xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
         xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
         xmlns:local="clr-namespace:fitnessTracker24_25"
         mc:Ignorable="d"
-        Title="FitnessTracker24-25"
+        Title="Detalles de ejercicio:"
         Height="450" 
         Width="800">
     <Grid>
         <TabControl>
-            <TabItem Header="Ejercicios">
+            <TabItem Header="Ejecuciones">
+
                 <Grid Name="EjerciciosGrid">
+
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
 
-                    <DataGrid Name="DataGridEjercicio"
-                              Grid.Row="0" 
+                    <DataGrid Name="DataGridEjecuciones"
                               SelectionMode="Single"
                               IsReadOnly="True"
                               AutoGenerateColumns="False"
@@ -26,56 +27,54 @@
                               CanUserResizeColumns="False"
                               VerticalScrollBarVisibility="Auto"
                               HorizontalScrollBarVisibility="Auto"
-                              MouseDoubleClick="DataGridEjercicio_MouseDoubleClick"
-                              SelectionChanged="DataGridEjercicio_SelectionChanged">
+                              SelectionChanged="ListViewEjecuciones_SelectionChanged">
                         <DataGrid.Columns>
-                            <DataGridTextColumn  Width="*" Header="Nombre" Binding="{Binding NombreEjercicio}"/>
-                            <DataGridTextColumn  Width="2*" Header="Descripcion" Binding="{Binding DescripcionEjercicio}"/>
-                            <DataGridTextColumn  Width="*" Header="Grupo Muscular" Binding="{Binding GruposMuscularesString}"/>
+                            <DataGridTextColumn Width="*" Header="Repeticiones" Binding="{Binding Repeticiones}"/>
+                            <DataGridTextColumn Width="*" Header="Peso" Binding="{Binding Peso}"/>
+                            <DataGridTextColumn Width="*" Header="Fecha y Hora" Binding="{Binding FechaHoraFormateada}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    
+
                     <StackPanel Name="BotonesStackPanel"
                                 Grid.Row="1"
                                 HorizontalAlignment="Right"
                                 Orientation="Horizontal">
-                        
+
                         <Button Name="AddButton"
                                 Content="Añadir"
                                 Margin="5"
                                 Click="AddButton_Click"/>
-                        
-                        <Button Name="EditButton"
-                                Content="Modificar"
-                                Margin="5"
-                                IsEnabled="False"
-                                Click="EditButton_Click"/>
-                        
+
                         <Button Name="DeleteButton"
                                 Content="Eliminar"
                                 Margin="5"
-                                IsEnabled="False"
-                                Click="DeleteButton_Click"/>
+                                Click="DeleteButton_Click"
+                                IsEnabled="False"/>
                     </StackPanel>
                 </Grid>
             </TabItem>
-            <TabItem Header="Daily Insights">
+            <TabItem Header="Grafico">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
-                        <!-- Selección de Fecha -->
+                        <!-- Título -->
                         <RowDefinition Height="*"/>
                         <!-- Gráfico -->
                     </Grid.RowDefinitions>
 
-                    <!-- Selección de Fecha -->
-                    <StackPanel Orientation="Horizontal" Grid.Row="0" Margin="10">
-                        <TextBlock Text="Seleccione una fecha:" VerticalAlignment="Center" Margin="0,0,10,0"/>
-                        <DatePicker Name="DatePickerFecha" SelectedDateChanged="DatePickerFecha_SelectedDate"/>
-                    </StackPanel>
+                    <!-- Título -->
+                    <Label Name="TituloLabel"
+                               Grid.Row="0"
+                               FontSize="20"
+                               FontWeight="Bold"
+                               HorizontalAlignment="Center"
+                               Margin="10"/>
 
                     <!-- Gráfico -->
-                    <Canvas Name="CanvasGrafico" Grid.Row="1" Background="LightGray" Margin="10"/>
+                    <Canvas Name="CanvasGrafico"
+                            Grid.Row="1"
+                            Background="LightGray"
+                            Margin="10"/>
                 </Grid>
             </TabItem>
         </TabControl>

@@ -1,0 +1,87 @@
+﻿<Window x:Class="fitnessTracker24_25.Vista.AddEjecucionWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:mah="http://metro.mahapps.com/winfx/xaml/controls"
+        xmlns:local="clr-namespace:fitnessTracker24_25.Vista"
+        xmlns:custom="clr-namespace:fitnessTracker24_25.Utiles"
+        mc:Ignorable="d"
+        Title="AñadirEjecucion"
+        Height="400"
+        Width="350">
+    <Grid>
+        <Grid.RowDefinitions>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+            <RowDefinition Height="Auto"/>
+        </Grid.RowDefinitions>
+
+        <Grid.ColumnDefinitions>
+            <ColumnDefinition Width="Auto"/>
+            <ColumnDefinition Width="Auto"/>
+        </Grid.ColumnDefinitions>
+        
+        <Label Content="Repeticiones: " 
+               Grid.Row="0"
+               Grid.Column="0"
+               HorizontalAlignment="Center"
+               Margin="5"/>
+        <custom:IntTextBox x:Name="RepeticionesTextBox"
+                           Grid.Row="0"
+                           Grid.Column="1"
+                           Margin="25,5,-25,5"/>
+
+
+        <Label Content="Peso: " 
+               Grid.Row="1"
+               Grid.Column="0"
+               HorizontalAlignment="Center"
+               Margin="5"/>
+        <custom:IntTextBox x:Name="PesoTextBox"
+                   Grid.Row="1"
+                   Grid.Column="1"
+                   Margin="25,5,-25,5"/>
+
+        <Label Content="Fecha: " 
+               Grid.Row="2"
+               Grid.Column="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+        <Calendar Grid.Row="2" 
+                  Grid.Column="1" 
+                  Grid.ColumnSpan="4" 
+                  Margin="20" 
+                  Name="FechaPicker"
+                  HorizontalAlignment="Center"
+                  VerticalAlignment="Center"/>
+
+        <Label Content="Hora: " 
+               Grid.Row="3"
+               Grid.Column="0"
+               HorizontalAlignment="Center"
+               VerticalAlignment="Center"/>
+        <mah:TimePicker Name="HoraPicker"
+                        Grid.Row="3"
+                        Grid.Column="1"
+                        Margin="5"/>
+
+        <!-- Botones Aceptar y Cancelar -->
+        <StackPanel Grid.Row="4" 
+                    Grid.Column="1" 
+                    Orientation="Horizontal" 
+                    HorizontalAlignment="Right" 
+                    Margin="5">
+
+            <Button Content="Aceptar"
+            Margin="5"
+            Click="AceptarButton_Click"/>
+
+            <Button Content="Cancelar"
+            Margin="5"
+            Click="CancelarButton_Click"/>
+        </StackPanel>
+    </Grid>
+</Window>
