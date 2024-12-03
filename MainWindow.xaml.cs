@@ -1,21 +1,17 @@
 ﻿using System;
 using System.Collections.Generic;
 using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
 using System.Windows;
 using System.Windows.Controls;
-using System.Windows.Data;
-using System.Windows.Documents;
 using System.Windows.Input;
 using System.Windows.Media;
-using System.Windows.Media.Imaging;
-using System.Windows.Navigation;
 using System.Windows.Shapes;
-using System.Collections;
 using fitnessTracker24_25.Modelo;
 using fitnessTracker24_25.Vista;
 using System.Collections.ObjectModel;
+using Microsoft.Win32;
+using Newtonsoft.Json;
+using System.IO;
 
 namespace fitnessTracker24_25
 {
@@ -31,110 +27,27 @@ namespace fitnessTracker24_25
     {
         AddEjercicioWindow addEjercicioWindow;
         private EjecucionWindow ejecucionWindow;
-        public ObservableCollection<Ejercicio> ejercicios;
+        public ObservableCollection<Ejercicio> ejercicios { get; set; }
         public event EjercicioSelecionadaEventHandler NuevaSeleccionEjercicio;
+        private List<string> gruposMusculares = new List<string> { "Brazos", "Espalda", "Piernas", "Core", "Pecho" };
 
 
         public MainWindow()
         {
             InitializeComponent();
-
-            // Inicializar colección de ejercicios
-            ejercicios = new ObservableCollection<Ejercicio>
-            {
-                new Ejercicio("Dominadas", "Ejercicio para espalda", new List<string> { "Espalda", "Brazos" })
-                {
-                    ejecuciones = new ObservableCollection<Ejecucion>
-                    {
-                        new Ejecucion(10, 50.0, System.DateTime.Now.AddMinutes(-30)),
-                        new Ejecucion(8, 55.0, System.DateTime.Now.AddMinutes(-15)),
-                        new Ejecucion(6, 60.0, System.DateTime.Now.AddMinutes(-5))
-                    }
-                },
-                new Ejercicio("Press de banca", "Ejercicio para pecho", new List<string> { "Pecho" })
-                {
-                    ejecuciones = new ObservableCollection<Ejecucion>
-                    {
-                        new Ejecucion(12, 75.0, System.DateTime.Now.AddMinutes(-60)),
-                        new Ejecucion(10, 80.0, System.DateTime.Now.AddMinutes(-30)),
-                        new Ejecucion(8, 85.0, System.DateTime.Now)
-                    }
-                },
-                new Ejercicio("Sentadillas", "Ejercicio para piernas", new List<string> { "Piernas" })
-                {
-                    ejecuciones = new ObservableCollection<Ejecucion>
-                    {
-                        new Ejecucion(15, 100.0, System.DateTime.Now.AddHours(-3)),
-                        new Ejecucion(12, 110.0, System.DateTime.Now.AddHours(-2)),
-                        new Ejecucion(10, 120.0, System.DateTime.Now.AddHours(-1))
-                    }
-                },
-                new Ejercicio("Remo con barra", "Ejercicio para espalda y brazos", new List<string> { "Espalda", "Brazos" })
-                {
-                    ejecuciones = new ObservableCollection<Ejecucion>
-                    {
-                        new Ejecucion(12, 50.0, System.DateTime.Now.AddMinutes(-45)),
-                        new Ejecucion(10, 55.0, System.DateTime.Now.AddMinutes(-30)),
-                        new Ejecucion(8, 60.0, System.DateTime.Now)
-                    }
-                },
-                new Ejercicio("Press militar", "Ejercicio para hombros", new List<string> { "Hombros" })
-                {
-                    ejecuciones = new ObservableCollection<Ejecucion>
-                    {
-                        new Ejecucion(12, 40.0, System.DateTime.Now.AddMinutes(-120)),
-                        new Ejecucion(10, 45.0, System.DateTime.Now.AddMinutes(-90)),
-                        new Ejecucion(8, 50.0, System.DateTime.Now.AddMinutes(-60))
-                    }
-                },
-                new Ejercicio("Flexiones", "Ejercicio para pecho y brazos", new List<string> { "Pecho", "Brazos" })
-                {
-                    ejecuciones = new ObservableCollection<Ejecucion>
-                    {
-                        new Ejecucion(20, 0.0, System.DateTime.Now.AddHours(-4)), // Peso corporal
-                        new Ejecucion(18, 0.0, System.DateTime.Now.AddHours(-3)),
-                        new Ejecucion(15, 0.0, System.DateTime.Now.AddHours(-2))
-                    }
-                },
-                new Ejercicio("Peso muerto", "Ejercicio para espalda y piernas", new List<string> { "Espalda", "Piernas" })
-                {
-                    ejecuciones = new ObservableCollection<Ejecucion>
-                    {
-                        new Ejecucion(8, 100.0, System.DateTime.Now.AddHours(-3)),
-                        new Ejecucion(6, 110.0, System.DateTime.Now.AddHours(-2)),
-                        new Ejecucion(4, 120.0, System.DateTime.Now.AddHours(-1))
-                    }
-                },
-                new Ejercicio("Curl de bíceps", "Ejercicio para brazos", new List<string> { "Brazos" })
-                {
-                    ejecuciones = new ObservableCollection<Ejecucion>
-                    {
-                        new Ejecucion(15, 15.0, System.DateTime.Now.AddMinutes(-120)),
-                        new Ejecucion(12, 17.5, System.DateTime.Now.AddMinutes(-90)),
-                        new Ejecucion(10, 20.0, System.DateTime.Now.AddMinutes(-60))
-                    }
-                },
-                new Ejercicio("Plancha abdominal", "Ejercicio para abdomen", new List<string> { "Abdomen" })
-                {
-                    ejecuciones = new ObservableCollection<Ejecucion>
-                    {
-                        new Ejecucion(1, 0.0, System.DateTime.Now.AddHours(-2)), // 1 minuto
-                        new Ejecucion(1, 0.0, System.DateTime.Now.AddHours(-1)), // 1 minuto
-                        new Ejecucion(1, 0.0, System.DateTime.Now) // 1 minuto
-                    }
-                },
-                new Ejercicio("Zancadas", "Ejercicio para piernas y glúteos", new List<string> { "Piernas"})
-                {
-                    ejecuciones = new ObservableCollection<Ejecucion>
-                    {
-                        new Ejecucion(12, 30.0, System.DateTime.Now.AddMinutes(-45)),
-                        new Ejecucion(10, 35.0, System.DateTime.Now.AddMinutes(-30)),
-                        new Ejecucion(8, 40.0, System.DateTime.Now)
-                    }
-                }
-            };
-
+            this.Closed += MainWindow_Closed; // Suscribirse al evento de cierre
+            IniciarEjericicios();
             DataGridEjercicio.ItemsSource = ejercicios;
+            DatePickerGrafico.SelectedDate = DateTime.Now;
+            CanvasGrafico.SizeChanged += (s, e) => DibujarGraficoRadial(DatePickerGrafico.SelectedDate.Value, ejercicios, gruposMusculares);
+        }
+        
+        private void MainWindow_Closed(object sender, EventArgs e)
+        {
+            if (ejecucionWindow != null && ejecucionWindow.IsVisible)
+            {
+                ejecucionWindow.Close();
+            }
         }
 
         private void AddButton_Click(object sender, RoutedEventArgs e)
@@ -186,18 +99,14 @@ namespace fitnessTracker24_25
 
         private void DataGridEjercicio_MouseDoubleClick(object sender, MouseButtonEventArgs e)
         {
-            Ejercicio ejercicioSeleccionado = (Ejercicio)DataGridEjercicio.SelectedItem;
-            if (ejecucionWindow == null || !ejecucionWindow.IsVisible)
+            if (DataGridEjercicio.SelectedItem is Ejercicio ejercicioSeleccionado)
             {
-                // Crea una nueva instancia si no existe o está cerrada
-                ejecucionWindow = new EjecucionWindow(ejercicioSeleccionado);
-                ejecucionWindow.Show(); // Abre la ventana de forma no modal
-                ejecucionWindow.ActualizarEjecuciones(ejercicioSeleccionado);
-                ejecucionWindow.ActualizarGraficoBarras(ejercicioSeleccionado);
-            }
-            else
-            {
-                // Actualiza el contenido si la ventana ya está abierta
+                if (ejecucionWindow == null || !ejecucionWindow.IsVisible)
+                {
+                    ejecucionWindow = new EjecucionWindow(ejercicioSeleccionado, this);
+                    ejecucionWindow.Show();
+                }
+
                 ejecucionWindow.ActualizarEjecuciones(ejercicioSeleccionado);
                 ejecucionWindow.ActualizarGraficoBarras(ejercicioSeleccionado);
             }
@@ -221,124 +130,385 @@ namespace fitnessTracker24_25
             NuevaSeleccionEjercicio?.Invoke(this, new EjercicioSelecionadaEventArgs(ejercicioSeleccionado)); //Manda el evento al MainWindows con la selecionada o un null si no hay ninguna
         }
 
-        private void DatePickerFecha_SelectedDate(object sender, EventArgs e)
+        private void DibujarGraficoRadial(DateTime fecha, ObservableCollection<Ejercicio> ejercicios, List<string> gruposMusculares)
         {
-            if (DatePickerFecha.SelectedDate.HasValue)
-            {
-                DateTime fechaSeleccionada = DatePickerFecha.SelectedDate.Value;
-                DibujarGrafico(fechaSeleccionada);
-            }
-        }
-
-        private void DibujarGrafico(DateTime fecha)
-        {
-            // Limpiar el canvas antes de dibujar un nuevo gráfico
             CanvasGrafico.Children.Clear();
 
-            // Obtener las repeticiones agrupadas por grupo muscular en la fecha seleccionada
-            var gruposMusculares = CalcularRepeticionesPorGrupo(fecha);
-
-            if (!gruposMusculares.Any())
+            if (ejercicios == null || !ejercicios.Any())
             {
-                // Mostrar mensaje si no hay datos para la fecha seleccionada
-                MessageBox.Show("No hay datos de repeticiones para la fecha seleccionada.", "Información", MessageBoxButton.OK, MessageBoxImage.Information);
+                MessageBox.Show("No hay ejercicios registrados.", "Información", MessageBoxButton.OK, MessageBoxImage.Information);
                 return;
             }
 
-            // Configurar propiedades básicas del gráfico
-            const double radio = 150; // Radio máximo del gráfico
-            double centroX = CanvasGrafico.Width / 2; // Coordenada X del centro
-            double centroY = CanvasGrafico.Height / 2; // Coordenada Y del centro
+            // Filtrar ejecuciones por la fecha seleccionada
+            var ejecucionesEnFecha = ejercicios
+                .Where(e => e.ejecuciones != null)
+                .SelectMany(e => e.ejecuciones.Where(ex => ex.FechaHora.Date == fecha.Date)
+                .Select(ex => new { e.MusculosEjercicio, ex.Repeticiones }))
+                .ToList();
 
-            // Calcular ángulos para cada grupo muscular
-            var angulos = CalcularAngulosRadiales(gruposMusculares);
+            // Agrupar repeticiones por grupo muscular
+            var repeticionesPorGrupo = ejecucionesEnFecha
+                .SelectMany(e => e.MusculosEjercicio.Select(g => new { Grupo = g, e.Repeticiones }))
+                .GroupBy(e => e.Grupo)
+                .ToDictionary(g => g.Key, g => g.Sum(e => e.Repeticiones));
 
-            // Generar puntos para el polígono
-            var puntosPoligono = CalcularPuntosPoligono(gruposMusculares, angulos, radio, centroX, centroY);
+            // Configurar dimensiones del gráfico
+            double anchoCanvas = CanvasGrafico.ActualWidth > 0 ? CanvasGrafico.ActualWidth : 700;
+            double altoCanvas = CanvasGrafico.ActualHeight > 0 ? CanvasGrafico.ActualHeight : 300;
+            double centroX = anchoCanvas / 2;
+            double centroY = altoCanvas / 2;
+            double radio = Math.Min(anchoCanvas, altoCanvas) / 2 - 40;
+            double maxRepeticiones = 100; // Máximo de 100 repeticiones
 
-            // Dibujar el polígono
-            DibujarPoligono(puntosPoligono);
+            // Dibujar ejes radiales
+            int numGrupos = gruposMusculares.Count;
+            double anguloIncremento = 2 * Math.PI / numGrupos;
 
-            // Agregar etiquetas para los grupos musculares
-            AgregarEtiquetas(gruposMusculares, angulos, radio, centroX, centroY);
-        }
-
-        private Dictionary<string, int> CalcularRepeticionesPorGrupo(DateTime fecha)
-        {
-            return ejercicios
-                .SelectMany(e => e.ejecuciones
-                    .Where(ex => ex.FechaHora.Date == fecha.Date)
-                    .Select(ex => new { Musculos = string.Join(", ", e.MusculosEjercicio), ex.Repeticiones }))
-                .GroupBy(g => g.Musculos)
-                .ToDictionary(g => g.Key, g => g.Sum(x => x.Repeticiones));
-        }
-
-
-        // Método auxiliar para calcular los ángulos radiales
-        private Dictionary<string, double> CalcularAngulosRadiales(Dictionary<string, int> gruposMusculares)
-        {
-            var angulos = new Dictionary<string, double>();
-            double totalGrupos = gruposMusculares.Count;
-            int i = 0;
-
-            foreach (var grupo in gruposMusculares.Keys)
+            for (int i = 0; i < numGrupos; i++)
             {
-                angulos[grupo] = (2 * Math.PI / totalGrupos) * i;
-                i++;
+                double angulo = i * anguloIncremento;
+                double x = centroX + radio * Math.Cos(angulo);
+                double y = centroY - radio * Math.Sin(angulo);
+
+                // Línea radial
+                var linea = new Line
+                {
+                    X1 = centroX,
+                    Y1 = centroY,
+                    X2 = x,
+                    Y2 = y,
+                    Stroke = Brushes.Gray,
+                    StrokeThickness = 0.5
+                };
+                CanvasGrafico.Children.Add(linea);
             }
 
-            return angulos;
-        }
+            // Dibujar el polígono de repeticiones
+            var puntosPoligono = new PointCollection();
 
-        // Método auxiliar para calcular los puntos del polígono
-        private PointCollection CalcularPuntosPoligono(Dictionary<string, int> gruposMusculares, Dictionary<string, double> angulos, double radio, double centroX, double centroY)
-        {
-            var puntos = new PointCollection();
-
-            foreach (var grupo in gruposMusculares)
+            for (int i = 0; i < numGrupos; i++)
             {
-                double escala = Math.Min(grupo.Value / 100.0, 1.0); // Escala de 0 a 1 basada en las repeticiones
-                double x = centroX + radio * escala * Math.Cos(angulos[grupo.Key]);
-                double y = centroY - radio * escala * Math.Sin(angulos[grupo.Key]);
-                puntos.Add(new Point(x, y));
+                double angulo = i * anguloIncremento;
+                string grupo = gruposMusculares[i];
+                double repeticiones = repeticionesPorGrupo.ContainsKey(grupo) ? repeticionesPorGrupo[grupo] : 0;
+                double repeticionesLimitadas = Math.Min(repeticiones, maxRepeticiones); // Limitar las repeticiones al máximo de 100
+                double longitud = (repeticionesLimitadas / maxRepeticiones) * radio;
+                double x = centroX + longitud * Math.Cos(angulo);
+                double y = centroY - longitud * Math.Sin(angulo);
+
+                puntosPoligono.Add(new Point(x, y));
             }
 
-            return puntos;
-        }
-
-        // Método auxiliar para dibujar el polígono en el Canvas
-        private void DibujarPoligono(PointCollection puntos)
-        {
-            var grafico = new Polygon
+            var poligono = new Polygon
             {
-                Points = puntos,
                 Stroke = Brushes.Blue,
                 StrokeThickness = 2,
                 Fill = Brushes.LightBlue,
-                Opacity = 0.7
+                Points = puntosPoligono
             };
 
-            CanvasGrafico.Children.Add(grafico);
-        }
+            CanvasGrafico.Children.Add(poligono);
 
-        // Método auxiliar para agregar etiquetas a los grupos musculares
-        private void AgregarEtiquetas(Dictionary<string, int> gruposMusculares, Dictionary<string, double> angulos, double radio, double centroX, double centroY)
-        {
-            foreach (var grupo in gruposMusculares)
+            // Dibujar puntos en los vértices después de agregar el polígono
+            for (int i = 0; i < puntosPoligono.Count; i++)
             {
-                double x = centroX + (radio + 20) * Math.Cos(angulos[grupo.Key]); // Posicionar un poco más afuera del polígono
-                double y = centroY - (radio + 20) * Math.Sin(angulos[grupo.Key]);
+                var punto = puntosPoligono[i];
+                var grupo = gruposMusculares[i];
+                var repeticiones = repeticionesPorGrupo.ContainsKey(grupo) ? repeticionesPorGrupo[grupo] : 0;
+
+                var ellipse = new Ellipse
+                {
+                    Width = 10,
+                    Height = 10,
+                    Fill = Brushes.Red,
+                    Tag = repeticiones // Usar la propiedad Tag para almacenar el número real de repeticiones
+                };
+
+                // Asignar eventos de mouse
+                ellipse.MouseEnter += (s, e) =>
+                {
+                    var el = s as Ellipse;
+                    var tooltip = new ToolTip { Content = $"{el.Tag} repeticiones" };
+                    el.ToolTip = tooltip;
+                    tooltip.IsOpen = true;
+                };
+
+                ellipse.MouseLeave += (s, e) =>
+                {
+                    var el = s as Ellipse;
+                    var tooltip = el.ToolTip as ToolTip;
+                    if (tooltip != null)
+                    {
+                        tooltip.IsOpen = false;
+                    }
+                };
+
+                Canvas.SetLeft(ellipse, punto.X - 5);
+                Canvas.SetTop(ellipse, punto.Y - 5);
+                CanvasGrafico.Children.Add(ellipse);
+            }
+
+            // Agregar etiquetas de los grupos musculares al final de los ejes
+            for (int i = 0; i < numGrupos; i++)
+            {
+                double angulo = i * anguloIncremento;
+                double x = centroX + radio * Math.Cos(angulo);
+                double y = centroY - radio * Math.Sin(angulo);
 
                 var etiqueta = new TextBlock
                 {
-                    Text = $"{grupo.Key} ({grupo.Value} rep)",
-                    Foreground = Brushes.Black,
-                    FontSize = 12
+                    Text = gruposMusculares[i],
+                    FontSize = 10,
+                    Foreground = Brushes.Black
                 };
 
-                Canvas.SetLeft(etiqueta, x);
-                Canvas.SetTop(etiqueta, y);
+                // Ajustar la posición de la etiqueta para que siempre sea visible
+                double offsetX = 30 * Math.Cos(angulo);
+                double offsetY = 30 * Math.Sin(angulo);
+                Canvas.SetLeft(etiqueta, centroX + (radio + offsetX) * Math.Cos(angulo) - 10);
+                Canvas.SetTop(etiqueta, centroY - (radio + offsetY) * Math.Sin(angulo) - 10);
                 CanvasGrafico.Children.Add(etiqueta);
+            }
+        }
+
+        private void SiguienteButton_Click(object sender, RoutedEventArgs e)
+        {
+            DatePickerGrafico.SelectedDate = DatePickerGrafico.SelectedDate.Value.AddDays(+1);
+            DibujarGraficoRadial(DatePickerGrafico.SelectedDate.Value, ejercicios, gruposMusculares);
+        }
+
+        private void AnteriorButton_Click(object sender, RoutedEventArgs e)
+        {
+            DatePickerGrafico.SelectedDate = DatePickerGrafico.SelectedDate.Value.AddDays(-1);
+            DibujarGraficoRadial(DatePickerGrafico.SelectedDate.Value, ejercicios, gruposMusculares);
+        }
+
+        private void DatePickerGrafico_SelectedDateChanged(object sender, SelectionChangedEventArgs e)
+        {
+            if (DatePickerGrafico.SelectedDate.HasValue)
+            {
+                DibujarGraficoRadial(DatePickerGrafico.SelectedDate.Value, ejercicios, gruposMusculares);
+            }
+        }
+        
+        private void IniciarEjericicios()
+        {
+            ejercicios = new ObservableCollection<Ejercicio>
+            {
+                new Ejercicio("Dominadas", "Ejercicio para espalda", new List<string> { "Espalda", "Brazos" })
+                {
+                    ejecuciones = new ObservableCollection<Ejecucion>
+                    {
+                        new Ejecucion(10, 50.0, DateTime.Now.AddDays(-10)),
+                        new Ejecucion(8, 55.0, DateTime.Now.AddDays(-9)),
+                        new Ejecucion(6, 60.0, DateTime.Now.AddDays(-8)),
+                        new Ejecucion(10, 52.0, DateTime.Now.AddDays(-7)),
+                        new Ejecucion(8, 57.0, DateTime.Now.AddDays(-6)),
+                        new Ejecucion(6, 62.0, DateTime.Now) // Hoy
+                    }
+                },
+                new Ejercicio("Press de banca", "Ejercicio para pecho", new List<string> { "Pecho" })
+                {
+                    ejecuciones = new ObservableCollection<Ejecucion>
+                    {
+                        new Ejecucion(12, 75.0, DateTime.Now.AddDays(-10)),
+                        new Ejecucion(10, 80.0, DateTime.Now.AddDays(-9)),
+                        new Ejecucion(8, 85.0, DateTime.Now.AddDays(-8)),
+                        new Ejecucion(12, 77.0, DateTime.Now),
+                        new Ejecucion(10, 82.0, DateTime.Now.AddDays(-6)),
+                        new Ejecucion(8, 87.0, DateTime.Now)
+                    }
+                },
+                new Ejercicio("Sentadillas con salto", "Ejercicio avanzado para piernas", new List<string> { "Piernas" })
+                {
+                    ejecuciones = new ObservableCollection<Ejecucion>
+                    {
+                        new Ejecucion(15, 80.0, DateTime.Now.AddDays(-10)),
+                        new Ejecucion(12, 90.0, DateTime.Now.AddDays(-9)),
+                        new Ejecucion(10, 100.0, DateTime.Now.AddDays(-8)),
+                        new Ejecucion(20, 95.0, DateTime.Now),
+                        new Ejecucion(18, 97.0, DateTime.Now),
+                        new Ejecucion(15, 105.0, DateTime.Now.AddDays(-5))
+                    }
+                },
+                new Ejercicio("Remo en máquina", "Ejercicio para espalda y brazos", new List<string> { "Espalda", "Brazos" })
+                {
+                    ejecuciones = new ObservableCollection<Ejecucion>
+                    {
+                        new Ejecucion(12, 55.0, DateTime.Now.AddDays(-10)),
+                        new Ejecucion(10, 60.0, DateTime.Now.AddDays(-9)),
+                        new Ejecucion(8, 65.0, DateTime.Now.AddDays(-8)),
+                        new Ejecucion(12, 58.0, DateTime.Now.AddDays(-7)),
+                        new Ejecucion(10, 63.0, DateTime.Now),
+                        new Ejecucion(8, 67.0, DateTime.Now)
+                    }
+                },
+                new Ejercicio("Press militar", "Ejercicio para hombros", new List<string> { "Brazos" })
+                {
+                    ejecuciones = new ObservableCollection<Ejecucion>
+                    {
+                        new Ejecucion(15, 45.0, DateTime.Now.AddDays(-10)),
+                        new Ejecucion(12, 50.0, DateTime.Now.AddDays(-9)),
+                        new Ejecucion(10, 55.0, DateTime.Now.AddDays(-8)),
+                        new Ejecucion(15, 48.0, DateTime.Now.AddDays(-7)),
+                        new Ejecucion(12, 53.0, DateTime.Now),
+                        new Ejecucion(10, 57.0, DateTime.Now)
+                    }
+                },
+                new Ejercicio("Burpees", "Ejercicio de cuerpo completo", new List<string> { "Espalda", "Brazos", "Piernas" })
+                {
+                    ejecuciones = new ObservableCollection<Ejecucion>
+                    {
+                        new Ejecucion(20, 0.0, DateTime.Now.AddDays(-10)), // Peso corporal
+                        new Ejecucion(18, 0.0, DateTime.Now.AddDays(-9)),
+                        new Ejecucion(15, 0.0, DateTime.Now.AddDays(-8)),
+                        new Ejecucion(25, 0.0, DateTime.Now),
+                        new Ejecucion(22, 0.0, DateTime.Now),
+                        new Ejecucion(18, 0.0, DateTime.Now.AddDays(-5))
+                    }
+                },
+                new Ejercicio("Plancha lateral", "Ejercicio para abdomen y oblicuos", new List<string> { "Abdomen" })
+                {
+                    ejecuciones = new ObservableCollection<Ejecucion>
+                    {
+                        new Ejecucion(1, 0.0, DateTime.Now.AddDays(-10)),
+                        new Ejecucion(1, 0.0, DateTime.Now.AddDays(-9)), 
+                        new Ejecucion(1, 0.0, DateTime.Now.AddDays(-8)), 
+                        new Ejecucion(1, 0.0, DateTime.Now),           
+                        new Ejecucion(1, 0.0, DateTime.Now),
+                        new Ejecucion(1, 0.0, DateTime.Now.AddDays(-5))
+                    }
+                },
+                new Ejercicio("Zancadas", "Ejercicio para piernas y glúteos", new List<string> { "Piernas" })
+                {
+                    ejecuciones = new ObservableCollection<Ejecucion>
+                    {
+                        new Ejecucion(15, 30.0, DateTime.Now.AddDays(-10)),
+                        new Ejecucion(12, 35.0, DateTime.Now.AddDays(-9)),
+                        new Ejecucion(10, 40.0, DateTime.Now),
+                        new Ejecucion(15, 32.0, DateTime.Now),
+                        new Ejecucion(12, 37.0, DateTime.Now.AddDays(-6)),
+                        new Ejecucion(10, 42.0, DateTime.Now)
+                    }
+                },
+                new Ejercicio("Swing con kettlebell", "Ejercicio para cadera y glúteos", new List<string> { "Piernas", "Espalda" })
+                {
+                    ejecuciones = new ObservableCollection<Ejecucion>
+                    {
+                        new Ejecucion(15, 20.0, DateTime.Now.AddDays(-10)),
+                        new Ejecucion(12, 25.0, DateTime.Now.AddDays(-9)),
+                        new Ejecucion(10, 30.0, DateTime.Now.AddDays(-8)),
+                        new Ejecucion(18, 28.0, DateTime.Now),
+                        new Ejecucion(16, 29.0, DateTime.Now),
+                        new Ejecucion(14, 31.0, DateTime.Now)
+                    }
+                }
+            };
+        }
+
+        //-------------------------------MENÚ-----------------------------------
+        //Método con todas las funcionalidades del menú
+        private void MenuItem_Click(object sender, RoutedEventArgs e)
+        {
+            try
+            {
+                // Exportar datos
+                if (sender == exportarDatos)
+                {
+                    SaveFileDialog exportDialog = new SaveFileDialog()
+                    {
+                        Title = "Exportar datos de los ejercicios",
+                        DefaultExt = ".fitnessTracker",
+                        Filter = "Archivo de Ejercicios (*.fitnessTracker)|*.fitnessTracker",
+                        AddExtension = true
+                    };
+
+                    if ((bool)exportDialog.ShowDialog())
+                    {
+                        try
+                        {
+                            // Serializar la colección de ejercicios
+                            string jsonString = JsonConvert.SerializeObject(ejercicios, Formatting.Indented);
+                            File.WriteAllText(exportDialog.FileName, jsonString);
+                            MessageBox.Show("Datos exportados correctamente.", "Exportación", MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error al exportar datos: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                    }
+                }
+                // Importar datos
+                else if (sender == importarDatos)
+                {
+                    OpenFileDialog importDialog = new OpenFileDialog()
+                    {
+                        Title = "Importar datos de ejercicios",
+                        DefaultExt = ".fitnessTracker",
+                        Filter = "Archivo de Ejercicios (*.fitnessTracker)|*.fitnessTracker",
+                        AddExtension = true
+                    };
+
+                    if ((bool)importDialog.ShowDialog())
+                    {
+                        try
+                        {
+                            // Leer el archivo JSON
+                            string jsonString = File.ReadAllText(importDialog.FileName);
+
+                            // Deserializar los datos en una lista de ejercicios
+                            List<Ejercicio> ejerciciosImportados = JsonConvert.DeserializeObject<List<Ejercicio>>(jsonString);
+
+                            // Validar si se importaron datos válidos
+                            if (ejerciciosImportados == null || !ejerciciosImportados.Any())
+                            {
+                                MessageBox.Show("El archivo no contiene datos válidos o está vacío.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
+                                return;
+                            }
+
+                            // Limpiar y agregar los ejercicios importados
+                            ejercicios.Clear();
+                            foreach (var ejercicio in ejerciciosImportados)
+                            {
+                                ejercicios.Add(ejercicio);
+                            }
+
+                            MessageBox.Show("Datos importados correctamente.", "Importación", MessageBoxButton.OK, MessageBoxImage.Information);
+                        }
+                        catch (JsonSerializationException jsonEx)
+                        {
+                            MessageBox.Show($"Error al procesar el archivo JSON: {jsonEx.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                        catch (IOException ioEx)
+                        {
+                            MessageBox.Show($"Error al leer el archivo: {ioEx.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                        catch (Exception ex)
+                        {
+                            MessageBox.Show($"Error inesperado: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                        }
+                    }
+                }
+                // Vaciar todos los datos
+                else if (sender == vaciarDatos)
+                {
+                    string msg = "¿Estás seguro de eliminar todos los registros?";
+                    string titulo = "Confirmación";
+                    MessageBoxButton btn = MessageBoxButton.YesNo;
+                    MessageBoxImage icon = MessageBoxImage.Warning;
+                    MessageBoxResult result = MessageBox.Show(msg, titulo, btn, icon);
+
+                    if (result == MessageBoxResult.Yes)
+                    {   
+                        ejercicios.Clear();
+                        MessageBox.Show("Todos los datos han sido eliminados.", "Eliminación", MessageBoxButton.OK, MessageBoxImage.Information);
+                    }
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show($"Error inesperado: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
             }
         }
     }

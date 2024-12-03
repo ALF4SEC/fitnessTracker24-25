@@ -27,7 +27,8 @@
                               CanUserResizeColumns="False"
                               VerticalScrollBarVisibility="Auto"
                               HorizontalScrollBarVisibility="Auto"
-                              SelectionChanged="ListViewEjecuciones_SelectionChanged">
+                              SelectionChanged="ListViewEjecuciones_SelectionChanged"
+                              MouseDoubleClick="DataGridEjecuciones_MouseDoubleClick">
                         <DataGrid.Columns>
                             <DataGridTextColumn Width="*" Header="Repeticiones" Binding="{Binding Repeticiones}"/>
                             <DataGridTextColumn Width="*" Header="Peso" Binding="{Binding Peso}"/>

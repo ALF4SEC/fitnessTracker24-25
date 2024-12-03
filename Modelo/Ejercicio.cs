@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.Collections.ObjectModel;
 using System.ComponentModel;
@@ -45,6 +46,14 @@ namespace fitnessTracker24_25.Modelo
         public string GruposMuscularesString
         {
             get { return string.Join(", ", MusculosEjercicio); }
+        }
+
+        public IEnumerable<Ejecucion> EjecucionesOrdenadas
+        {
+            get
+            {
+                return ejecuciones.OrderBy(e => e.FechaHora);
+            }
         }
 
         // Método que lanza el evento PropertyChanged cuando se cambia el valor de cualquier propiedad
