@@ -74,6 +74,8 @@ namespace fitnessTracker24_25.Vista
                 .Where(m => m.Seleccion) // Filtrar solo los seleccionados
                 .Select(m => m.NombreMusculo) // Obtener los nombres
                 .ToList(); // Convertir a una List<string>
+            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
+
             if (string.IsNullOrEmpty(NombreTextBox.Text) || string.IsNullOrEmpty(DescripcionTextBox.Text) || musculosSeleccionados.Count == 0)
             {
                 string msg = "Te falta por completar algún dato, asegúrate que has introduccido el nombre, la descripcion y has seleccionado un ejercicio";
@@ -82,26 +84,25 @@ namespace fitnessTracker24_25.Vista
                 MessageBoxImage icon = MessageBoxImage.Warning;
                 MessageBox.Show(msg, titulo, btn, icon);
             }
-
-            var mainWindow = Application.Current.Windows.OfType<MainWindow>().FirstOrDefault();
-            if (mainWindow == null)
+            else if (mainWindow == null)
             {
                 MessageBox.Show("Error: No se pudo acceder a la ventana principal.", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
                 return;
             }
-            
-
-            // Validar nombres duplicados
-            if (mainWindow.ejercicios.Any(ej => ej.NombreEjercicio.Equals(NombreTextBox.Text, StringComparison.OrdinalIgnoreCase)))
+            else if (mainWindow.ejercicios.Any(ej => ej.NombreEjercicio.Equals(NombreTextBox.Text, StringComparison.OrdinalIgnoreCase)))
             {
+                // Validar nombres duplicados
                 string msg = "Ya existe un ejercicio con ese nombre";
                 string titulo = "Cambia el nombre";
                 MessageBoxButton btn = MessageBoxButton.OK;
                 MessageBoxImage icon = MessageBoxImage.Warning;
                 MessageBox.Show(msg, titulo, btn, icon);
-            }
 
-            DialogResult = true;
+            }
+            else
+            {
+                DialogResult = true;
+            }
         }
 
         private void CancelarButton_Click(object sender, RoutedEventArgs e)

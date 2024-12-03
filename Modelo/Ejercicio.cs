@@ -43,11 +43,13 @@ namespace fitnessTracker24_25.Modelo
             set { musculoEjercicio = value; OnPropertyChanged("MusculosEjercicio"); }
         }
 
+        [JsonIgnore]
         public string GruposMuscularesString
         {
             get { return string.Join(", ", MusculosEjercicio); }
         }
 
+        [JsonIgnore]
         public IEnumerable<Ejecucion> EjecucionesOrdenadas
         {
             get

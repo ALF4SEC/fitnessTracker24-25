@@ -19,6 +19,11 @@ namespace fitnessTracker24_25.Modelo
             this.seleccion = seleccion;
         }
 
+        public Musculos(string nombreMusculo)
+        {
+            this.nombreMusculo = nombreMusculo;
+        }
+
         public string NombreMusculo
         {
             get { return nombreMusculo; }

@@ -29,14 +29,14 @@ namespace fitnessTracker24_25
         private EjecucionWindow ejecucionWindow;
         public ObservableCollection<Ejercicio> ejercicios { get; set; }
         public event EjercicioSelecionadaEventHandler NuevaSeleccionEjercicio;
-        private List<string> gruposMusculares = new List<string> { "Brazos", "Espalda", "Piernas", "Core", "Pecho" };
-
+        private ObservableCollection<Musculos> gruposMusculares;
 
         public MainWindow()
         {
             InitializeComponent();
             this.Closed += MainWindow_Closed; // Suscribirse al evento de cierre
             IniciarEjericicios();
+            IniciarMusculos();
             DataGridEjercicio.ItemsSource = ejercicios;
             DatePickerGrafico.SelectedDate = DateTime.Now;
             CanvasGrafico.SizeChanged += (s, e) => DibujarGraficoRadial(DatePickerGrafico.SelectedDate.Value, ejercicios, gruposMusculares);
@@ -130,7 +130,7 @@ namespace fitnessTracker24_25
             NuevaSeleccionEjercicio?.Invoke(this, new EjercicioSelecionadaEventArgs(ejercicioSeleccionado)); //Manda el evento al MainWindows con la selecionada o un null si no hay ninguna
         }
 
-        private void DibujarGraficoRadial(DateTime fecha, ObservableCollection<Ejercicio> ejercicios, List<string> gruposMusculares)
+        private void DibujarGraficoRadial(DateTime fecha, ObservableCollection<Ejercicio> ejercicios, ObservableCollection<Musculos> gruposMusculares)
         {
             CanvasGrafico.Children.Clear();
 
@@ -190,7 +190,7 @@ namespace fitnessTracker24_25
             for (int i = 0; i < numGrupos; i++)
             {
                 double angulo = i * anguloIncremento;
-                string grupo = gruposMusculares[i];
+                string grupo = gruposMusculares[i].NombreMusculo;
                 double repeticiones = repeticionesPorGrupo.ContainsKey(grupo) ? repeticionesPorGrupo[grupo] : 0;
                 double repeticionesLimitadas = Math.Min(repeticiones, maxRepeticiones); // Limitar las repeticiones al máximo de 100
                 double longitud = (repeticionesLimitadas / maxRepeticiones) * radio;
@@ -214,7 +214,7 @@ namespace fitnessTracker24_25
             for (int i = 0; i < puntosPoligono.Count; i++)
             {
                 var punto = puntosPoligono[i];
-                var grupo = gruposMusculares[i];
+                var grupo = gruposMusculares[i].NombreMusculo;
                 var repeticiones = repeticionesPorGrupo.ContainsKey(grupo) ? repeticionesPorGrupo[grupo] : 0;
 
                 var ellipse = new Ellipse
@@ -258,7 +258,7 @@ namespace fitnessTracker24_25
 
                 var etiqueta = new TextBlock
                 {
-                    Text = gruposMusculares[i],
+                    Text = gruposMusculares[i].NombreMusculo,
                     FontSize = 10,
                     Foreground = Brushes.Black
                 };
@@ -407,6 +407,18 @@ namespace fitnessTracker24_25
             };
         }
 
+        private void IniciarMusculos()
+        {
+            gruposMusculares = new ObservableCollection<Musculos>
+            {
+                new Musculos("Espalda"),
+                new Musculos("Brazos"),
+                new Musculos("Piernas"),
+                new Musculos("Abdomen"),
+                new Musculos("Glúteos"),
+                new Musculos("Cadera")
+            };
+        }
         //-------------------------------MENÚ-----------------------------------
         //Método con todas las funcionalidades del menú
         private void MenuItem_Click(object sender, RoutedEventArgs e)
@@ -416,99 +428,129 @@ namespace fitnessTracker24_25
                 // Exportar datos
                 if (sender == exportarDatos)
                 {
-                    SaveFileDialog exportDialog = new SaveFileDialog()
-                    {
-                        Title = "Exportar datos de los ejercicios",
-                        DefaultExt = ".fitnessTracker",
-                        Filter = "Archivo de Ejercicios (*.fitnessTracker)|*.fitnessTracker",
-                        AddExtension = true
-                    };
-
-                    if ((bool)exportDialog.ShowDialog())
-                    {
-                        try
-                        {
-                            // Serializar la colección de ejercicios
-                            string jsonString = JsonConvert.SerializeObject(ejercicios, Formatting.Indented);
-                            File.WriteAllText(exportDialog.FileName, jsonString);
-                            MessageBox.Show("Datos exportados correctamente.", "Exportación", MessageBoxButton.OK, MessageBoxImage.Information);
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show($"Error al exportar datos: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                        }
-                    }
+                    ExportarDatos();
                 }
                 // Importar datos
                 else if (sender == importarDatos)
                 {
-                    OpenFileDialog importDialog = new OpenFileDialog()
-                    {
-                        Title = "Importar datos de ejercicios",
-                        DefaultExt = ".fitnessTracker",
-                        Filter = "Archivo de Ejercicios (*.fitnessTracker)|*.fitnessTracker",
-                        AddExtension = true
-                    };
-
-                    if ((bool)importDialog.ShowDialog())
-                    {
-                        try
-                        {
-                            // Leer el archivo JSON
-                            string jsonString = File.ReadAllText(importDialog.FileName);
-
-                            // Deserializar los datos en una lista de ejercicios
-                            List<Ejercicio> ejerciciosImportados = JsonConvert.DeserializeObject<List<Ejercicio>>(jsonString);
-
-                            // Validar si se importaron datos válidos
-                            if (ejerciciosImportados == null || !ejerciciosImportados.Any())
-                            {
-                                MessageBox.Show("El archivo no contiene datos válidos o está vacío.", "Error", MessageBoxButton.OK, MessageBoxImage.Warning);
-                                return;
-                            }
-
-                            // Limpiar y agregar los ejercicios importados
-                            ejercicios.Clear();
-                            foreach (var ejercicio in ejerciciosImportados)
-                            {
-                                ejercicios.Add(ejercicio);
-                            }
-
-                            MessageBox.Show("Datos importados correctamente.", "Importación", MessageBoxButton.OK, MessageBoxImage.Information);
-                        }
-                        catch (JsonSerializationException jsonEx)
-                        {
-                            MessageBox.Show($"Error al procesar el archivo JSON: {jsonEx.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                        }
-                        catch (IOException ioEx)
-                        {
-                            MessageBox.Show($"Error al leer el archivo: {ioEx.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                        }
-                        catch (Exception ex)
-                        {
-                            MessageBox.Show($"Error inesperado: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
-                        }
-                    }
+                    ImportarDatos();
                 }
-                // Vaciar todos los datos
+                // Vaciar datos
                 else if (sender == vaciarDatos)
                 {
-                    string msg = "¿Estás seguro de eliminar todos los registros?";
-                    string titulo = "Confirmación";
-                    MessageBoxButton btn = MessageBoxButton.YesNo;
-                    MessageBoxImage icon = MessageBoxImage.Warning;
-                    MessageBoxResult result = MessageBox.Show(msg, titulo, btn, icon);
-
-                    if (result == MessageBoxResult.Yes)
-                    {   
-                        ejercicios.Clear();
-                        MessageBox.Show("Todos los datos han sido eliminados.", "Eliminación", MessageBoxButton.OK, MessageBoxImage.Information);
-                    }
+                    VaciarDatos();
                 }
             }
             catch (Exception ex)
             {
-                MessageBox.Show($"Error inesperado: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+                MessageBox.Show($"Error: {ex.Message}", "Error", MessageBoxButton.OK, MessageBoxImage.Error);
+            }
+        }
+
+        private void ExportarDatos()
+        {
+            // Crear el diálogo para guardar
+            SaveFileDialog guardarArchivo = new SaveFileDialog();
+            guardarArchivo.Title = "Guardar ejercicios";
+            guardarArchivo.Filter = "Archivo de Ejercicios (*.fitnessTracker)|*.fitnessTracker";
+            guardarArchivo.DefaultExt = ".fitnessTracker";
+
+            // Mostrar el diálogo
+            if (guardarArchivo.ShowDialog() == true)
+            {
+                try
+                {
+                    // Convertir los ejercicios a JSON
+                    string datosJson = JsonConvert.SerializeObject(ejercicios, Formatting.Indented);
+
+                    // Guardar en el archivo
+                    File.WriteAllText(guardarArchivo.FileName, datosJson);
+
+                    MessageBox.Show("Los datos se han guardado correctamente",
+                                  "Éxito",
+                                  MessageBoxButton.OK,
+                                  MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"No se pudo guardar el archivo: {ex.Message}",
+                                  "Error al guardar",
+                                  MessageBoxButton.OK,
+                                  MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void ImportarDatos()
+        {
+            // Crear el diálogo para abrir
+            OpenFileDialog abrirArchivo = new OpenFileDialog();
+            abrirArchivo.Title = "Abrir ejercicios";
+            abrirArchivo.Filter = "Archivo de Ejercicios (*.fitnessTracker)|*.fitnessTracker";
+            abrirArchivo.DefaultExt = ".fitnessTracker";
+
+            // Mostrar el diálogo
+            if (abrirArchivo.ShowDialog() == true)
+            {
+                try
+                {
+                    // Leer el archivo
+                    string datosJson = File.ReadAllText(abrirArchivo.FileName);
+
+                    // Convertir el JSON a ejercicios
+                    List<Ejercicio> ejerciciosNuevos = JsonConvert.DeserializeObject<List<Ejercicio>>(datosJson);
+
+                    // Comprobar si hay datos
+                    if (ejerciciosNuevos == null || ejerciciosNuevos.Count == 0)
+                    {
+                        MessageBox.Show("El archivo está vacío o no tiene el formato correcto",
+                                      "Error",
+                                      MessageBoxButton.OK,
+                                      MessageBoxImage.Warning);
+                        return;
+                    }
+
+                    // Borrar los ejercicios actuales
+                    ejercicios.Clear();
+
+                    // Añadir los nuevos ejercicios
+                    foreach (var ejercicio in ejerciciosNuevos)
+                    {
+                        ejercicios.Add(ejercicio);
+                    }
+
+                    MessageBox.Show("Los datos se han cargado correctamente",
+                                  "Éxito",
+                                  MessageBoxButton.OK,
+                                  MessageBoxImage.Information);
+                }
+                catch (Exception ex)
+                {
+                    MessageBox.Show($"No se pudo abrir el archivo: {ex.Message}",
+                                  "Error al abrir",
+                                  MessageBoxButton.OK,
+                                  MessageBoxImage.Error);
+                }
+            }
+        }
+
+        private void VaciarDatos()
+        {
+            // Preguntar antes de borrar
+            MessageBoxResult respuesta = MessageBox.Show(
+                "¿Estás seguro de que quieres borrar todos los datos?",
+                "Confirmar borrado",
+                MessageBoxButton.YesNo,
+                MessageBoxImage.Warning);
+
+            // Si el usuario dice que sí, borrar los datos
+            if (respuesta == MessageBoxResult.Yes)
+            {
+                ejercicios.Clear();
+                MessageBox.Show("Se han borrado todos los datos",
+                              "Datos borrados",
+                              MessageBoxButton.OK,
+                              MessageBoxImage.Information);
             }
         }
     }
