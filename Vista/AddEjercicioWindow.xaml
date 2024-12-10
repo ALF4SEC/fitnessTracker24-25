@@ -22,7 +22,7 @@
             <ColumnDefinition Width="*"/>
         </Grid.ColumnDefinitions>
 
-        <!-- Campo para el Nombre del Ejercicio -->
+        <!--Definimos el Nombre del Ejercicio-->
         <TextBlock Text="Nombre:" 
                    Grid.Row="0" 
                    Grid.Column="0" 
@@ -32,8 +32,7 @@
                  Grid.Row="0" 
                  Grid.Column="1" 
                  Margin="5"/>
-
-        <!-- Campo para la Descripción del Ejercicio -->
+        <!--Definimos la descripción del Ejercicio-->
         <TextBlock Text="Descripción:" 
                    Grid.Row="1" 
                    Grid.Column="0" 
@@ -43,8 +42,7 @@
                  Grid.Row="1" 
                  Grid.Column="1" 
                  Margin="5"/>
-
-        <!-- Selección de Grupos Musculares -->
+        <!--Definimos la seleccion de los grupos musculares del Ejercicio-->
         <TextBlock Text="Grupos Musculares:" 
                    Grid.Row="2" 
                    Grid.Column="0" 
@@ -68,18 +66,15 @@
                 <DataGridCheckBoxColumn Header="Elige" Width="*"  Binding="{Binding Seleccion}"/>
             </DataGrid.Columns>
         </DataGrid>
-
-        <!-- Botones Aceptar y Cancelar -->
+        <!--Definimos los  un StackPanel para botones Aceptar y Cancelar -->
         <StackPanel Grid.Row="3" 
                     Grid.Column="1" 
                     Orientation="Horizontal" 
                     HorizontalAlignment="Right" 
                     Margin="5">
-            
             <Button Content="Aceptar"
                     Margin="5"
                     Click="AceptarButton_Click"/>
-            
             <Button Content="Cancelar"
                     Margin="5"
                     Click="CancelarButton_Click"/>

@@ -10,25 +10,29 @@
         Width="800"
         Icon="fitnessTracker.png">
     <Grid>
+        <!--Definicion de las filas para poner un Menu y un TabControl-->
         <Grid.RowDefinitions>
             <RowDefinition Height ="auto"/>
             <RowDefinition Height="*"/>
         </Grid.RowDefinitions>
         
+        <!--Creacion de un Menu, para importar, exportar y vaciar los datos-->
         <Menu Grid.Row="0">
             <MenuItem Header="Importar" Name="importarDatos" Click="MenuItem_Click"/>
             <MenuItem Header="Exportar" Name ="exportarDatos" Click="MenuItem_Click"/>
             <MenuItem Header="Vaciar" Name="vaciarDatos" Click="MenuItem_Click"/>
         </Menu>
-        
+        <!--Definimos un TabControl para la creacion de pestañas-->
         <TabControl Grid.Row="1">
+            <!--Definimos la pestaña de Ejercicios-->
             <TabItem Header="Ejercicios">
+                <!--Creamos un grid para la disposicion de elementos en la pestaña-->
                 <Grid Name="EjerciciosGrid">
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-
+                    <!--Definimos el datagrid para mostrar los ejercicios-->
                     <DataGrid Name="DataGridEjercicio"
                               Grid.Row="0" 
                               SelectionMode="Single"
@@ -46,23 +50,20 @@
                             <DataGridTextColumn  Width="*" Header="Grupo Muscular" Binding="{Binding GruposMuscularesString}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-                    
+                    <!--Creamos un StackPanel para los botones-->
                     <StackPanel Name="BotonesStackPanel"
                                 Grid.Row="1"
                                 HorizontalAlignment="Right"
                                 Orientation="Horizontal">
-                        
                         <Button Name="AddButton"
                                 Content="Añadir"
                                 Margin="5"
                                 Click="AddButton_Click"/>
-                        
                         <Button Name="EditButton"
                                 Content="Modificar"
                                 Margin="5"
                                 IsEnabled="False"
                                 Click="EditButton_Click"/>
-                        
                         <Button Name="DeleteButton"
                                 Content="Eliminar"
                                 Margin="5"
@@ -71,16 +72,14 @@
                     </StackPanel>
                 </Grid>
             </TabItem>
+            <!--Definimos la pestaña de Daily Insights(Grafico radial)-->
             <TabItem Header="Daily Insights">
                 <Grid>
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
-                        <!-- Selección de Fecha -->
                         <RowDefinition Height="*"/>
-                        <!-- Gráfico -->
                     </Grid.RowDefinitions>
-
-                    <!-- Selección de Fecha -->
+                    <!--Creamos un StackPanel para los botones-->
                     <StackPanel Orientation="Horizontal" 
                                 HorizontalAlignment="Center"
                                 Grid.Row="0" 
@@ -97,8 +96,7 @@
                                 Margin="5" 
                                 Click="SiguienteButton_Click"/>
                     </StackPanel>
-
-                    <!-- Gráfico -->
+                    <!--Definimos un Canvas para el gráfico-->
                     <Canvas Name="CanvasGrafico" Grid.Row="1" Background="LightGray" Margin="10"/>
                 </Grid>
             </TabItem>

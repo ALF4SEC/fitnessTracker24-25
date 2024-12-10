@@ -43,7 +43,6 @@ namespace fitnessTracker24_25.Modelo
             get { return fecheHora.ToString("dd/MM/yyyy HH:mm:ss"); }
         }
 
-
         // Método que lanza el evento PropertyChanged cuando se cambia el valor de cualquier propiedad
         void OnPropertyChanged(String propertyname)
         {

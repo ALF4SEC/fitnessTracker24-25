@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Newtonsoft.Json;
+using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Linq;
@@ -19,6 +20,7 @@ namespace fitnessTracker24_25.Modelo
             this.seleccion = seleccion;
         }
 
+        [JsonConstructor]
         public Musculos(string nombreMusculo)
         {
             this.nombreMusculo = nombreMusculo;
@@ -30,6 +32,7 @@ namespace fitnessTracker24_25.Modelo
             set { nombreMusculo = value; OnPropertyChanged("NombreEjercicio"); }
         }
 
+        [JsonIgnore]
         public bool Seleccion
         {
             get { return seleccion; }

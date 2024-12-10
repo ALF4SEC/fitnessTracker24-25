@@ -1,0 +1,1612 @@
+[
+  {
+    "nombreEjercicio": "Sentadilla profunda",
+    "descripcionEjercicio": "Ejercicio para piernas y glúteos",
+    "musculoEjercicio": [
+      {
+        "nombreMusculo": "Piernas",
+        "seleccion": false,
+        "NombreMusculo": "Piernas"
+      }
+    ],
+    "ejecuciones": [
+      {
+        "ejecuciones": 15,
+        "peso": 100.0,
+        "fecheHora": "2024-11-19T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 100.0,
+        "FechaHora": "2024-11-19T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "19/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 105.0,
+        "fecheHora": "2024-11-20T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 105.0,
+        "FechaHora": "2024-11-20T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "20/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 110.0,
+        "fecheHora": "2024-11-21T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 110.0,
+        "FechaHora": "2024-11-21T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "21/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 15,
+        "peso": 115.0,
+        "fecheHora": "2024-11-22T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 115.0,
+        "FechaHora": "2024-11-22T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "22/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 120.0,
+        "fecheHora": "2024-11-23T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 120.0,
+        "FechaHora": "2024-11-23T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "23/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 125.0,
+        "fecheHora": "2024-11-24T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 125.0,
+        "FechaHora": "2024-11-24T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "24/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 15,
+        "peso": 130.0,
+        "fecheHora": "2024-11-25T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 130.0,
+        "FechaHora": "2024-11-25T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "25/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 135.0,
+        "fecheHora": "2024-11-26T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 135.0,
+        "FechaHora": "2024-11-26T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "26/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 140.0,
+        "fecheHora": "2024-11-27T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 140.0,
+        "FechaHora": "2024-11-27T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "27/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 15,
+        "peso": 145.0,
+        "fecheHora": "2024-11-28T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 145.0,
+        "FechaHora": "2024-11-28T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "28/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 150.0,
+        "fecheHora": "2024-11-29T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 150.0,
+        "FechaHora": "2024-11-29T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "29/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 155.0,
+        "fecheHora": "2024-11-30T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 155.0,
+        "FechaHora": "2024-11-30T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "30/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 15,
+        "peso": 160.0,
+        "fecheHora": "2024-12-01T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 160.0,
+        "FechaHora": "2024-12-01T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "01/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 165.0,
+        "fecheHora": "2024-12-02T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 165.0,
+        "FechaHora": "2024-12-02T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "02/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 170.0,
+        "fecheHora": "2024-12-04T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 170.0,
+        "FechaHora": "2024-12-04T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "04/12/2024 21:09:52"
+      }
+    ],
+    "NombreEjercicio": "Sentadilla profunda",
+    "DescripcionEjercicio": "Ejercicio para piernas y glúteos",
+    "MusculosEjercicio": [
+      {
+        "nombreMusculo": "Piernas",
+        "seleccion": false,
+        "NombreMusculo": "Piernas"
+      }
+    ]
+  },
+  {
+    "nombreEjercicio": "Peso muerto",
+    "descripcionEjercicio": "Ejercicio para espalda baja y piernas",
+    "musculoEjercicio": [
+      {
+        "nombreMusculo": "Espalda",
+        "seleccion": false,
+        "NombreMusculo": "Espalda"
+      },
+      {
+        "nombreMusculo": "Piernas",
+        "seleccion": false,
+        "NombreMusculo": "Piernas"
+      }
+    ],
+    "ejecuciones": [
+      {
+        "ejecuciones": 8,
+        "peso": 120.0,
+        "fecheHora": "2024-11-19T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 120.0,
+        "FechaHora": "2024-11-19T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "19/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 6,
+        "peso": 125.0,
+        "fecheHora": "2024-11-20T21:09:52.3868104+01:00",
+        "Repeticiones": 6,
+        "Peso": 125.0,
+        "FechaHora": "2024-11-20T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "20/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 130.0,
+        "fecheHora": "2024-11-21T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 130.0,
+        "FechaHora": "2024-11-21T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "21/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 135.0,
+        "fecheHora": "2024-11-22T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 135.0,
+        "FechaHora": "2024-11-22T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "22/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 140.0,
+        "fecheHora": "2024-11-23T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 140.0,
+        "FechaHora": "2024-11-23T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "23/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 6,
+        "peso": 145.0,
+        "fecheHora": "2024-11-24T21:09:52.3868104+01:00",
+        "Repeticiones": 6,
+        "Peso": 145.0,
+        "FechaHora": "2024-11-24T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "24/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 150.0,
+        "fecheHora": "2024-11-25T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 150.0,
+        "FechaHora": "2024-11-25T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "25/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 155.0,
+        "fecheHora": "2024-11-26T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 155.0,
+        "FechaHora": "2024-11-26T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "26/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 160.0,
+        "fecheHora": "2024-11-27T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 160.0,
+        "FechaHora": "2024-11-27T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "27/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 6,
+        "peso": 165.0,
+        "fecheHora": "2024-11-28T21:09:52.3868104+01:00",
+        "Repeticiones": 6,
+        "Peso": 165.0,
+        "FechaHora": "2024-11-28T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "28/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 170.0,
+        "fecheHora": "2024-11-29T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 170.0,
+        "FechaHora": "2024-11-29T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "29/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 175.0,
+        "fecheHora": "2024-11-30T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 175.0,
+        "FechaHora": "2024-11-30T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "30/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 180.0,
+        "fecheHora": "2024-12-01T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 180.0,
+        "FechaHora": "2024-12-01T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "01/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 185.0,
+        "fecheHora": "2024-12-02T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 185.0,
+        "FechaHora": "2024-12-02T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "02/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 190.0,
+        "fecheHora": "2024-12-04T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 190.0,
+        "FechaHora": "2024-12-04T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "04/12/2024 21:09:52"
+      }
+    ],
+    "NombreEjercicio": "Peso muerto",
+    "DescripcionEjercicio": "Ejercicio para espalda baja y piernas",
+    "MusculosEjercicio": [
+      {
+        "nombreMusculo": "Espalda",
+        "seleccion": false,
+        "NombreMusculo": "Espalda"
+      },
+      {
+        "nombreMusculo": "Piernas",
+        "seleccion": false,
+        "NombreMusculo": "Piernas"
+      }
+    ]
+  },
+  {
+    "nombreEjercicio": "Press militar",
+    "descripcionEjercicio": "Ejercicio para hombros",
+    "musculoEjercicio": [
+      {
+        "nombreMusculo": "Brazos",
+        "seleccion": false,
+        "NombreMusculo": "Brazos"
+      }
+    ],
+    "ejecuciones": [
+      {
+        "ejecuciones": 10,
+        "peso": 40.0,
+        "fecheHora": "2024-11-19T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 40.0,
+        "FechaHora": "2024-11-19T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "19/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 42.5,
+        "fecheHora": "2024-11-20T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 42.5,
+        "FechaHora": "2024-11-20T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "20/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 45.0,
+        "fecheHora": "2024-11-21T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 45.0,
+        "FechaHora": "2024-11-21T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "21/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 47.5,
+        "fecheHora": "2024-11-22T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 47.5,
+        "FechaHora": "2024-11-22T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "22/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 50.0,
+        "fecheHora": "2024-11-23T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 50.0,
+        "FechaHora": "2024-11-23T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "23/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 52.5,
+        "fecheHora": "2024-11-24T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 52.5,
+        "FechaHora": "2024-11-24T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "24/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 55.0,
+        "fecheHora": "2024-11-25T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 55.0,
+        "FechaHora": "2024-11-25T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "25/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 57.5,
+        "fecheHora": "2024-11-26T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 57.5,
+        "FechaHora": "2024-11-26T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "26/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 60.0,
+        "fecheHora": "2024-11-27T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 60.0,
+        "FechaHora": "2024-11-27T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "27/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 62.5,
+        "fecheHora": "2024-11-28T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 62.5,
+        "FechaHora": "2024-11-28T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "28/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 65.0,
+        "fecheHora": "2024-11-29T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 65.0,
+        "FechaHora": "2024-11-29T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "29/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 67.5,
+        "fecheHora": "2024-11-30T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 67.5,
+        "FechaHora": "2024-11-30T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "30/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 70.0,
+        "fecheHora": "2024-12-01T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 70.0,
+        "FechaHora": "2024-12-01T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "01/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 72.5,
+        "fecheHora": "2024-12-02T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 72.5,
+        "FechaHora": "2024-12-02T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "02/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 75.0,
+        "fecheHora": "2024-12-04T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 75.0,
+        "FechaHora": "2024-12-04T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "04/12/2024 21:09:52"
+      }
+    ],
+    "NombreEjercicio": "Press militar",
+    "DescripcionEjercicio": "Ejercicio para hombros",
+    "MusculosEjercicio": [
+      {
+        "nombreMusculo": "Brazos",
+        "seleccion": false,
+        "NombreMusculo": "Brazos"
+      }
+    ]
+  },
+  {
+    "nombreEjercicio": "Dominadas",
+    "descripcionEjercicio": "Ejercicio para espalda y brazos",
+    "musculoEjercicio": [
+      {
+        "nombreMusculo": "Espalda",
+        "seleccion": false,
+        "NombreMusculo": "Espalda"
+      },
+      {
+        "nombreMusculo": "Brazos",
+        "seleccion": false,
+        "NombreMusculo": "Brazos"
+      }
+    ],
+    "ejecuciones": [
+      {
+        "ejecuciones": 10,
+        "peso": 0.0,
+        "fecheHora": "2024-11-19T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-19T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "19/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 0.0,
+        "fecheHora": "2024-11-20T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-20T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "20/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 0.0,
+        "fecheHora": "2024-11-21T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-21T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "21/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 0.0,
+        "fecheHora": "2024-11-22T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-22T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "22/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 0.0,
+        "fecheHora": "2024-11-23T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-23T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "23/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 0.0,
+        "fecheHora": "2024-11-24T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-24T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "24/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 0.0,
+        "fecheHora": "2024-11-25T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-25T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "25/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 0.0,
+        "fecheHora": "2024-11-26T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-26T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "26/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 0.0,
+        "fecheHora": "2024-11-27T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-27T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "27/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 0.0,
+        "fecheHora": "2024-11-28T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-28T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "28/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 0.0,
+        "fecheHora": "2024-11-29T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-29T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "29/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 0.0,
+        "fecheHora": "2024-11-30T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-30T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "30/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 0.0,
+        "fecheHora": "2024-12-01T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 0.0,
+        "FechaHora": "2024-12-01T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "01/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 0.0,
+        "fecheHora": "2024-12-02T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 0.0,
+        "FechaHora": "2024-12-02T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "02/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 0.0,
+        "fecheHora": "2024-12-04T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 0.0,
+        "FechaHora": "2024-12-04T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "04/12/2024 21:09:52"
+      }
+    ],
+    "NombreEjercicio": "Dominadas",
+    "DescripcionEjercicio": "Ejercicio para espalda y brazos",
+    "MusculosEjercicio": [
+      {
+        "nombreMusculo": "Espalda",
+        "seleccion": false,
+        "NombreMusculo": "Espalda"
+      },
+      {
+        "nombreMusculo": "Brazos",
+        "seleccion": false,
+        "NombreMusculo": "Brazos"
+      }
+    ]
+  },
+  {
+    "nombreEjercicio": "Swing con kettlebell",
+    "descripcionEjercicio": "Ejercicio para cadera y glúteos",
+    "musculoEjercicio": [
+      {
+        "nombreMusculo": "Piernas",
+        "seleccion": false,
+        "NombreMusculo": "Piernas"
+      }
+    ],
+    "ejecuciones": [
+      {
+        "ejecuciones": 15,
+        "peso": 20.0,
+        "fecheHora": "2024-11-19T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 20.0,
+        "FechaHora": "2024-11-19T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "19/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 22.0,
+        "fecheHora": "2024-11-20T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 22.0,
+        "FechaHora": "2024-11-20T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "20/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 18,
+        "peso": 24.0,
+        "fecheHora": "2024-11-21T21:09:52.3868104+01:00",
+        "Repeticiones": 18,
+        "Peso": 24.0,
+        "FechaHora": "2024-11-21T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "21/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 14,
+        "peso": 26.0,
+        "fecheHora": "2024-11-22T21:09:52.3868104+01:00",
+        "Repeticiones": 14,
+        "Peso": 26.0,
+        "FechaHora": "2024-11-22T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "22/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 28.0,
+        "fecheHora": "2024-11-23T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 28.0,
+        "FechaHora": "2024-11-23T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "23/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 15,
+        "peso": 30.0,
+        "fecheHora": "2024-11-24T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 30.0,
+        "FechaHora": "2024-11-24T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "24/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 16,
+        "peso": 32.0,
+        "fecheHora": "2024-11-25T21:09:52.3868104+01:00",
+        "Repeticiones": 16,
+        "Peso": 32.0,
+        "FechaHora": "2024-11-25T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "25/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 14,
+        "peso": 34.0,
+        "fecheHora": "2024-11-26T21:09:52.3868104+01:00",
+        "Repeticiones": 14,
+        "Peso": 34.0,
+        "FechaHora": "2024-11-26T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "26/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 18,
+        "peso": 36.0,
+        "fecheHora": "2024-11-27T21:09:52.3868104+01:00",
+        "Repeticiones": 18,
+        "Peso": 36.0,
+        "FechaHora": "2024-11-27T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "27/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 16,
+        "peso": 38.0,
+        "fecheHora": "2024-11-28T21:09:52.3868104+01:00",
+        "Repeticiones": 16,
+        "Peso": 38.0,
+        "FechaHora": "2024-11-28T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "28/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 15,
+        "peso": 40.0,
+        "fecheHora": "2024-11-29T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 40.0,
+        "FechaHora": "2024-11-29T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "29/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 14,
+        "peso": 42.0,
+        "fecheHora": "2024-11-30T21:09:52.3868104+01:00",
+        "Repeticiones": 14,
+        "Peso": 42.0,
+        "FechaHora": "2024-11-30T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "30/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 16,
+        "peso": 44.0,
+        "fecheHora": "2024-12-01T21:09:52.3868104+01:00",
+        "Repeticiones": 16,
+        "Peso": 44.0,
+        "FechaHora": "2024-12-01T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "01/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 15,
+        "peso": 46.0,
+        "fecheHora": "2024-12-02T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 46.0,
+        "FechaHora": "2024-12-02T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "02/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 18,
+        "peso": 48.0,
+        "fecheHora": "2024-12-04T21:09:52.3868104+01:00",
+        "Repeticiones": 18,
+        "Peso": 48.0,
+        "FechaHora": "2024-12-04T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "04/12/2024 21:09:52"
+      }
+    ],
+    "NombreEjercicio": "Swing con kettlebell",
+    "DescripcionEjercicio": "Ejercicio para cadera y glúteos",
+    "MusculosEjercicio": [
+      {
+        "nombreMusculo": "Piernas",
+        "seleccion": false,
+        "NombreMusculo": "Piernas"
+      }
+    ]
+  },
+  {
+    "nombreEjercicio": "Press de banca",
+    "descripcionEjercicio": "Ejercicio para pecho",
+    "musculoEjercicio": [
+      {
+        "nombreMusculo": "Pecho",
+        "seleccion": false,
+        "NombreMusculo": "Pecho"
+      }
+    ],
+    "ejecuciones": [
+      {
+        "ejecuciones": 12,
+        "peso": 70.0,
+        "fecheHora": "2024-11-19T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 70.0,
+        "FechaHora": "2024-11-19T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "19/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 75.0,
+        "fecheHora": "2024-11-20T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 75.0,
+        "FechaHora": "2024-11-20T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "20/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 80.0,
+        "fecheHora": "2024-11-21T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 80.0,
+        "FechaHora": "2024-11-21T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "21/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 72.0,
+        "fecheHora": "2024-11-22T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 72.0,
+        "FechaHora": "2024-11-22T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "22/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 77.0,
+        "fecheHora": "2024-11-23T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 77.0,
+        "FechaHora": "2024-11-23T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "23/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 82.0,
+        "fecheHora": "2024-11-24T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 82.0,
+        "FechaHora": "2024-11-24T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "24/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 74.0,
+        "fecheHora": "2024-11-25T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 74.0,
+        "FechaHora": "2024-11-25T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "25/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 79.0,
+        "fecheHora": "2024-11-26T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 79.0,
+        "FechaHora": "2024-11-26T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "26/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 84.0,
+        "fecheHora": "2024-11-27T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 84.0,
+        "FechaHora": "2024-11-27T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "27/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 76.0,
+        "fecheHora": "2024-11-28T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 76.0,
+        "FechaHora": "2024-11-28T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "28/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 81.0,
+        "fecheHora": "2024-11-29T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 81.0,
+        "FechaHora": "2024-11-29T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "29/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 86.0,
+        "fecheHora": "2024-11-30T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 86.0,
+        "FechaHora": "2024-11-30T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "30/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 78.0,
+        "fecheHora": "2024-12-01T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 78.0,
+        "FechaHora": "2024-12-01T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "01/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 83.0,
+        "fecheHora": "2024-12-02T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 83.0,
+        "FechaHora": "2024-12-02T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "02/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 88.0,
+        "fecheHora": "2024-12-04T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 88.0,
+        "FechaHora": "2024-12-04T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "04/12/2024 21:09:52"
+      }
+    ],
+    "NombreEjercicio": "Press de banca",
+    "DescripcionEjercicio": "Ejercicio para pecho",
+    "MusculosEjercicio": [
+      {
+        "nombreMusculo": "Pecho",
+        "seleccion": false,
+        "NombreMusculo": "Pecho"
+      }
+    ]
+  },
+  {
+    "nombreEjercicio": "Remo con barra",
+    "descripcionEjercicio": "Ejercicio para espalda y brazos",
+    "musculoEjercicio": [
+      {
+        "nombreMusculo": "Espalda",
+        "seleccion": false,
+        "NombreMusculo": "Espalda"
+      },
+      {
+        "nombreMusculo": "Brazos",
+        "seleccion": false,
+        "NombreMusculo": "Brazos"
+      }
+    ],
+    "ejecuciones": [
+      {
+        "ejecuciones": 10,
+        "peso": 50.0,
+        "fecheHora": "2024-11-19T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 50.0,
+        "FechaHora": "2024-11-19T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "19/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 52.5,
+        "fecheHora": "2024-11-20T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 52.5,
+        "FechaHora": "2024-11-20T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "20/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 55.0,
+        "fecheHora": "2024-11-21T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 55.0,
+        "FechaHora": "2024-11-21T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "21/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 57.5,
+        "fecheHora": "2024-11-22T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 57.5,
+        "FechaHora": "2024-11-22T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "22/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 60.0,
+        "fecheHora": "2024-11-23T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 60.0,
+        "FechaHora": "2024-11-23T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "23/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 62.5,
+        "fecheHora": "2024-11-24T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 62.5,
+        "FechaHora": "2024-11-24T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "24/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 65.0,
+        "fecheHora": "2024-11-25T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 65.0,
+        "FechaHora": "2024-11-25T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "25/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 67.5,
+        "fecheHora": "2024-11-26T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 67.5,
+        "FechaHora": "2024-11-26T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "26/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 70.0,
+        "fecheHora": "2024-11-27T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 70.0,
+        "FechaHora": "2024-11-27T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "27/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 72.5,
+        "fecheHora": "2024-11-28T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 72.5,
+        "FechaHora": "2024-11-28T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "28/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 75.0,
+        "fecheHora": "2024-11-29T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 75.0,
+        "FechaHora": "2024-11-29T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "29/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 77.5,
+        "fecheHora": "2024-11-30T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 77.5,
+        "FechaHora": "2024-11-30T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "30/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 80.0,
+        "fecheHora": "2024-12-01T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 80.0,
+        "FechaHora": "2024-12-01T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "01/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 82.5,
+        "fecheHora": "2024-12-02T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 82.5,
+        "FechaHora": "2024-12-02T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "02/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 85.0,
+        "fecheHora": "2024-12-04T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 85.0,
+        "FechaHora": "2024-12-04T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "04/12/2024 21:09:52"
+      }
+    ],
+    "NombreEjercicio": "Remo con barra",
+    "DescripcionEjercicio": "Ejercicio para espalda y brazos",
+    "MusculosEjercicio": [
+      {
+        "nombreMusculo": "Espalda",
+        "seleccion": false,
+        "NombreMusculo": "Espalda"
+      },
+      {
+        "nombreMusculo": "Brazos",
+        "seleccion": false,
+        "NombreMusculo": "Brazos"
+      }
+    ]
+  },
+  {
+    "nombreEjercicio": "Plancha abdominal",
+    "descripcionEjercicio": "Ejercicio isométrico para el abdomen",
+    "musculoEjercicio": [
+      {
+        "nombreMusculo": "Abdomen",
+        "seleccion": false,
+        "NombreMusculo": "Abdomen"
+      }
+    ],
+    "ejecuciones": [
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-11-19T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-19T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "19/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-11-20T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-20T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "20/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-11-21T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-21T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "21/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-11-22T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-22T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "22/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-11-23T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-23T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "23/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-11-24T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-24T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "24/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-11-25T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-25T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "25/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-11-26T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-26T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "26/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-11-27T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-27T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "27/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-11-28T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-28T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "28/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-11-29T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-29T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "29/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-11-30T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-30T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "30/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-12-01T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-12-01T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "01/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-12-02T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-12-02T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "02/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 1,
+        "peso": 0.0,
+        "fecheHora": "2024-12-04T21:09:52.3868104+01:00",
+        "Repeticiones": 1,
+        "Peso": 0.0,
+        "FechaHora": "2024-12-04T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "04/12/2024 21:09:52"
+      }
+    ],
+    "NombreEjercicio": "Plancha abdominal",
+    "DescripcionEjercicio": "Ejercicio isométrico para el abdomen",
+    "MusculosEjercicio": [
+      {
+        "nombreMusculo": "Abdomen",
+        "seleccion": false,
+        "NombreMusculo": "Abdomen"
+      }
+    ]
+  },
+  {
+    "nombreEjercicio": "Burpees",
+    "descripcionEjercicio": "Ejercicio de cuerpo completo",
+    "musculoEjercicio": [
+      {
+        "nombreMusculo": "Brazos",
+        "seleccion": false,
+        "NombreMusculo": "Brazos"
+      },
+      {
+        "nombreMusculo": "Piernas",
+        "seleccion": false,
+        "NombreMusculo": "Piernas"
+      }
+    ],
+    "ejecuciones": [
+      {
+        "ejecuciones": 10,
+        "peso": 0.0,
+        "fecheHora": "2024-11-19T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-19T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "19/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 0.0,
+        "fecheHora": "2024-11-20T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-20T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "20/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 15,
+        "peso": 0.0,
+        "fecheHora": "2024-11-21T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-21T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "21/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 0.0,
+        "fecheHora": "2024-11-22T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-22T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "22/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 0.0,
+        "fecheHora": "2024-11-23T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-23T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "23/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 0.0,
+        "fecheHora": "2024-11-24T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-24T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "24/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 15,
+        "peso": 0.0,
+        "fecheHora": "2024-11-25T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-25T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "25/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 0.0,
+        "fecheHora": "2024-11-26T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-26T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "26/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 0.0,
+        "fecheHora": "2024-11-27T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-27T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "27/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 0.0,
+        "fecheHora": "2024-11-28T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-28T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "28/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 15,
+        "peso": 0.0,
+        "fecheHora": "2024-11-29T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-29T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "29/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 0.0,
+        "fecheHora": "2024-11-30T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 0.0,
+        "FechaHora": "2024-11-30T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "30/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 0.0,
+        "fecheHora": "2024-12-01T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 0.0,
+        "FechaHora": "2024-12-01T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "01/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 0.0,
+        "fecheHora": "2024-12-02T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 0.0,
+        "FechaHora": "2024-12-02T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "02/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 15,
+        "peso": 0.0,
+        "fecheHora": "2024-12-04T21:09:52.3868104+01:00",
+        "Repeticiones": 15,
+        "Peso": 0.0,
+        "FechaHora": "2024-12-04T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "04/12/2024 21:09:52"
+      }
+    ],
+    "NombreEjercicio": "Burpees",
+    "DescripcionEjercicio": "Ejercicio de cuerpo completo",
+    "MusculosEjercicio": [
+      {
+        "nombreMusculo": "Brazos",
+        "seleccion": false,
+        "NombreMusculo": "Brazos"
+      },
+      {
+        "nombreMusculo": "Piernas",
+        "seleccion": false,
+        "NombreMusculo": "Piernas"
+      }
+    ]
+  },
+  {
+    "nombreEjercicio": "Zancadas",
+    "descripcionEjercicio": "Ejercicio para piernas y glúteos",
+    "musculoEjercicio": [
+      {
+        "nombreMusculo": "Piernas",
+        "seleccion": false,
+        "NombreMusculo": "Piernas"
+      }
+    ],
+    "ejecuciones": [
+      {
+        "ejecuciones": 10,
+        "peso": 20.0,
+        "fecheHora": "2024-11-19T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 20.0,
+        "FechaHora": "2024-11-19T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "19/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 22.0,
+        "fecheHora": "2024-11-20T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 22.0,
+        "FechaHora": "2024-11-20T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "20/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 24.0,
+        "fecheHora": "2024-11-21T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 24.0,
+        "FechaHora": "2024-11-21T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "21/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 26.0,
+        "fecheHora": "2024-11-22T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 26.0,
+        "FechaHora": "2024-11-22T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "22/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 28.0,
+        "fecheHora": "2024-11-23T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 28.0,
+        "FechaHora": "2024-11-23T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "23/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 30.0,
+        "fecheHora": "2024-11-24T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 30.0,
+        "FechaHora": "2024-11-24T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "24/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 32.0,
+        "fecheHora": "2024-11-25T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 32.0,
+        "FechaHora": "2024-11-25T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "25/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 34.0,
+        "fecheHora": "2024-11-26T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 34.0,
+        "FechaHora": "2024-11-26T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "26/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 36.0,
+        "fecheHora": "2024-11-27T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 36.0,
+        "FechaHora": "2024-11-27T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "27/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 38.0,
+        "fecheHora": "2024-11-28T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 38.0,
+        "FechaHora": "2024-11-28T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "28/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 40.0,
+        "fecheHora": "2024-11-29T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 40.0,
+        "FechaHora": "2024-11-29T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "29/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 42.0,
+        "fecheHora": "2024-11-30T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 42.0,
+        "FechaHora": "2024-11-30T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "30/11/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 10,
+        "peso": 44.0,
+        "fecheHora": "2024-12-01T21:09:52.3868104+01:00",
+        "Repeticiones": 10,
+        "Peso": 44.0,
+        "FechaHora": "2024-12-01T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "01/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 12,
+        "peso": 46.0,
+        "fecheHora": "2024-12-02T21:09:52.3868104+01:00",
+        "Repeticiones": 12,
+        "Peso": 46.0,
+        "FechaHora": "2024-12-02T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "02/12/2024 21:09:52"
+      },
+      {
+        "ejecuciones": 8,
+        "peso": 48.0,
+        "fecheHora": "2024-12-04T21:09:52.3868104+01:00",
+        "Repeticiones": 8,
+        "Peso": 48.0,
+        "FechaHora": "2024-12-04T21:09:52.3868104+01:00",
+        "FechaHoraFormateada": "04/12/2024 21:09:52"
+      }
+    ],
+    "NombreEjercicio": "Zancadas",
+    "DescripcionEjercicio": "Ejercicio para piernas y glúteos",
+    "MusculosEjercicio": [
+      {
+        "nombreMusculo": "Piernas",
+        "seleccion": false,
+        "NombreMusculo": "Piernas"
+      }
+    ]
+  }
+]

@@ -13,11 +13,11 @@ namespace fitnessTracker24_25.Modelo
     {
         public string nombreEjercicio;
         public string descripcionEjercicio;
-        public List<string> musculoEjercicio;
+        public List<Musculos> musculoEjercicio;
         public ObservableCollection<Ejecucion> ejecuciones;
         public event PropertyChangedEventHandler PropertyChanged;
 
-        public Ejercicio(string nombreEjercicio, string descripcionEjercicio, List<string> musculoEjercicio)
+        public Ejercicio(string nombreEjercicio, string descripcionEjercicio, List<Musculos> musculoEjercicio)
         {
             this.nombreEjercicio = nombreEjercicio;
             this.descripcionEjercicio = descripcionEjercicio;
@@ -37,7 +37,7 @@ namespace fitnessTracker24_25.Modelo
             set { descripcionEjercicio = value; OnPropertyChanged("DescripcionEjercicio"); }
         }
 
-        public List<string> MusculosEjercicio
+        public List<Musculos> MusculosEjercicio
         {
             get { return musculoEjercicio; }
             set { musculoEjercicio = value; OnPropertyChanged("MusculosEjercicio"); }
@@ -46,7 +46,7 @@ namespace fitnessTracker24_25.Modelo
         [JsonIgnore]
         public string GruposMuscularesString
         {
-            get { return string.Join(", ", MusculosEjercicio); }
+            get { return string.Join(", ", MusculosEjercicio.Select(m => m.NombreMusculo)); }
         }
 
         [JsonIgnore]
@@ -57,6 +57,7 @@ namespace fitnessTracker24_25.Modelo
                 return ejecuciones.OrderBy(e => e.FechaHora);
             }
         }
+
 
         // Método que lanza el evento PropertyChanged cuando se cambia el valor de cualquier propiedad
         void OnPropertyChanged(String propertyname)

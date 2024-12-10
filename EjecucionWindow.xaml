@@ -10,16 +10,18 @@
         Width="800"
         Icon="fitnessTracker.png">
     <Grid>
+        <!--Definimos un TabControl para la creacion de pestañas-->
         <TabControl>
+            <!--Creamos la pestaña de Ejecuciones-->
             <TabItem Header="Ejecuciones">
-
+                <!--Creamos un grid para la disposicion de elementos en la pestaña-->
                 <Grid Name="EjerciciosGrid">
-
+                    <!--Definimos filas para disponer el datagrid y los botones-->
                     <Grid.RowDefinitions>
                         <RowDefinition Height="*"/>
                         <RowDefinition Height="Auto"/>
                     </Grid.RowDefinitions>
-
+                    <!--Definimos el datagrid para mostrar las ejecuciones-->
                     <DataGrid Name="DataGridEjecuciones"
                               SelectionMode="Single"
                               IsReadOnly="True"
@@ -36,7 +38,7 @@
                             <DataGridTextColumn Width="*" Header="Fecha y Hora" Binding="{Binding FechaHoraFormateada}"/>
                         </DataGrid.Columns>
                     </DataGrid>
-
+                    <!--Definimos un StackPanel para los botones Añadir, Eliminar y Modificar-->
                     <StackPanel Name="BotonesStackPanel"
                                 Grid.Row="1"
                                 HorizontalAlignment="Right"
@@ -55,24 +57,24 @@
                     </StackPanel>
                 </Grid>
             </TabItem>
+            <!--Creamos la pestaña de Gráfico-->
             <TabItem Header="Grafico">
+                <!--Creamos un grid para la disposicion de elementos en la pantalla-->
                 <Grid>
+                    <!--Definimos las filas para un Titulo del ejercicio y un Canvas-->
                     <Grid.RowDefinitions>
                         <RowDefinition Height="Auto"/>
-                        <!-- Título -->
                         <RowDefinition Height="*"/>
-                        <!-- Gráfico -->
                     </Grid.RowDefinitions>
 
-                    <!-- Título -->
+                    <!--Título-->
                     <Label Name="TituloLabel"
                                Grid.Row="0"
                                FontSize="20"
                                FontWeight="Bold"
                                HorizontalAlignment="Center"
                                Margin="10"/>
-
-                    <!-- Gráfico -->
+                    <!--Gráfico-->
                     <Canvas Name="CanvasGrafico"
                             Grid.Row="1"
                             Background="LightGray"
